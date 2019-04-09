@@ -19,6 +19,14 @@ This plugin provides some shortcodes for simple displaying XRP accounts or trans
 1. Upload the plugin to the `/wp-content/plugins/wp-xrp-info` directory folder, or install the plugin through the WordPress plugin screen directly.
 1. Activate the plugin through the `Plugins` screen in Wordpress.
 
+== Usage ==
+This plugins activates 3 shortcodes
+1. [xrp_account account=PLACE_THE_XRP_ACCOUNT_NUMBER]
+1. [xrp_transaction account=PLACE_THE_XRP_ACCOUNT_NUMBER limit=HOW_MANY_TRANSACTIONS]
+1. [xrp_qrcode account=PLACE_THE_XRP_ACCOUNT_NUMBER]
+
+Just use the shortcodes on any place in your wordpress content.
+
 == FAQ ==
 
 = Which XRP server (rippled) is used by default? =
