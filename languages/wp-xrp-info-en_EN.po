@@ -1,0 +1,27 @@
+# Copyright (C) 2019 Jens Twesmann
+# This file is distributed under the same license as the WP XRP Info plugin.
+msgid ""
+msgstr ""
+"Project-Id-Version: WP XRP Info 1.0.1\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wp-xrp-info\n"
+"POT-Creation-Date: 2019-03-17T19:58:11+00:00\n"
+"PO-Revision-Date: 2019-04-09 15:14+0200\n"
+"Last-Translator: \n"
+"Language-Team: Jens Twesmann - j.twesmann@star-media.biz\n"
+"Language: de_DE\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.2.1\n"
+"X-Domain: wp-xrp-info\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#. Plugin Name of the plugin
+msgid "WP XRP Info"
+msgstr "WP XRP Info"
+
+msgid "XRP Account does not exist"
+msgstr "XRP account doest not exist"
+
+msgid "Show transaction"
+msgstr "Show transaction"
