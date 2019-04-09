@@ -5,7 +5,7 @@
  * Description: Generates a shortcodes to display balance of a <a href="https://ripple.com/xrp">XRP</a> account or the transactions of an account.
  * Version: 1.0.0
  * Author: Jens Twesmann
- * Author URI: https://www.star-media.biz
+ * Author URI: https://github.com/jetwes
  * Developer: Jens Twesmann
  * Developer URI: https://github.com/jetwes
  * Text Domain: wp-xrp-info
@@ -122,3 +122,41 @@ add_shortcode('xrp_account', 'get_xrp_account');
 add_shortcode('xrp_transactions','get_xrp_transactions');
 
 add_shortcode('xrp_qrcode','get_xrp_qrcode');
+
+add_action('admin_menu', 'plugin_admin_add_page');
+function plugin_admin_add_page() {
+    add_options_page('WP XRP Info Settings', 'WP XRP Info Menu', 'manage_options', 'plugin', 'plugin_options_page');
+}
+function plugin_options_page() {
+    ?>
+    <div>
+        <h2>WP XRP Info Plugin Settings</h2>
+        Options for the XRP Info plugin.
+        <form action="options.php" method="post">
+            <?php settings_fields('plugin_options'); ?>
+            <?php do_settings_sections('plugin'); ?>
+
+            <input name="Submit" type="submit" value="<?php esc_attr_e('Save Changes'); ?>" />
+        </form></div>
+
+    <?php
+}
+
+// add the admin settings and such
+add_action('admin_init', 'plugin_admin_init');
+function plugin_admin_init()
+{
+    register_setting('plugin_options', 'plugin_options', 'plugin_options_validate');
+    add_settings_section('plugin_main', 'Main Settings', 'plugin_section_text', 'plugin');
+    add_settings_field('plugin_use_proxy', 'Use Proxy', 'plugin_setting_string', 'plugin', 'plugin_main');
+} ?>
+
+<?php function plugin_section_text() {
+    echo '<p></p>';
+} ?>
+
+<?php function plugin_setting_string() {
+    $options = get_option('plugin_options');
+    echo "<label for='use_proxy'>yes / no (default)</label><input id='use_proxy' name='plugin_options[use_proxy]' size='40' type='text' value='{$options['use_proxy']}' />";
+} ?>
+
