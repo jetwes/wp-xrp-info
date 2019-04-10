@@ -25,3 +25,12 @@ msgstr "XRP Account existiert nicht"
 
 msgid "Show transaction"
 msgstr "Zeige Transaktion"
+
+msgid "Account"
+msgstr "Konto"
+
+msgid "Amount"
+msgstr "Betrag"
+
+msgid "Date"
+msgstr "Datum"

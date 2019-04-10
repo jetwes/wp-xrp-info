@@ -6,7 +6,6 @@ This plugin provides some shortcodes for simple displaying XRP accounts or trans
 
 * [PHP](https://php.net) 5.6 or greater (PHP 7.2 or higher is recommended)
 * [WordPress](https://wordpress.org/) 5.1 or greater
-* A "self-owned" and **activated** [XRP](https://ripple.com/xrp) account without destination tags. (You may **not** use an Exchange!)
 
 ## Installing
 
@@ -19,7 +18,8 @@ This plugins activates 3 shortcodes
 1. [xrp_transactions account=PLACE_THE_XRP_ACCOUNT_NUMBER limit=HOW_MANY_TRANSACTIONS proxy=no]
 1. [xrp_qrcode account=PLACE_THE_XRP_ACCOUNT_NUMBER proxy=no]
 
-Just use the shortcodes on any place in your wordpress content.
+Just use the shortcodes on any place in your wordpress content. The transactions are shown as a table with the class "wp_xrp_info" so you can
+easily adjust the output with css. Received transaction of this account are in green - sent transactions in red.
 
 ## FAQ ##
 

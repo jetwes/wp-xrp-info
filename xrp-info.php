@@ -102,9 +102,17 @@ function get_xrp_transactions($atts = [])
     //get the transactions
     $transactions = $ledger->account_tx($atts['account'],$limit);
     //generate output
-    $output = '<div><table><thead><tr><th>Sender</th><th>Amount</th><th>Hash</th><th>Date</th></tr></thead><tbody>';
+    $output = '<div><table class="wp_xrp_info"><thead><tr><th>'.__('Account').'</th><th>'.__('Amount').'</th><th>Hash</th><th>'.__('Date').'</th></tr></thead><tbody>';
     foreach($transactions as $transaction) {
-        $output .= "<tr><td>".$transaction->tx->Account."</td><td>".$transaction->tx->Amount/1000000 ." XRP</td><td><a href='https://bithomp.com/explorer/".$transaction->tx->hash."' target='_blank'>".__('Show transaction')."</a></td><td>".date('Y-m-d H:i:s',$transaction->tx->date+946684800)."</td></tr>";
+        //show destination tag if there is one
+        if ($transaction->tx->DestinationTag)
+            $dtag = " (".$transaction->tx->DestinationTag.")";
+        else $dtag = '';
+        //show received in green, send in red
+        if ($transaction->tx->Account != $atts['account'])
+            $color = 'green';
+        else $color = 'red';
+        $output .= "<tr><td style='color: ".$color."'>".$transaction->tx->Account.$dtag."</td><td>".$transaction->tx->Amount/1000000 ." XRP</td><td><a href='https://bithomp.com/explorer/".$transaction->tx->hash."' target='_blank'>".__('Show transaction')."</a></td><td>".date('Y-m-d H:i:s',$transaction->tx->date+946684800)."</td></tr>";
     }
     $output .= '</tbody></table></div>';
     return $output;

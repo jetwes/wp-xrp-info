@@ -26,6 +26,8 @@ This plugins activates 3 shortcodes
 1. [xrp_qrcode account=PLACE_THE_XRP_ACCOUNT_NUMBER]
 
 Just use the shortcodes on any place in your wordpress content.
+The transactions are shown as a table with the class "wp_xrp_info" so you can easily adjust the output with css.
+Received transaction of this account are in green - sent transactions in red.
 
 == FAQ ==
 
