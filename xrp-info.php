@@ -123,6 +123,7 @@ add_shortcode('xrp_transactions','get_xrp_transactions');
 
 add_shortcode('xrp_qrcode','get_xrp_qrcode');
 
+/*
 add_action('admin_menu', 'plugin_admin_add_page');
 function plugin_admin_add_page() {
     add_options_page('WP XRP Info Settings', 'WP XRP Info Menu', 'manage_options', 'plugin', 'plugin_options_page');
@@ -158,5 +159,4 @@ function plugin_admin_init()
 <?php function plugin_setting_string() {
     $options = get_option('plugin_options');
     echo "<label for='use_proxy'>yes / no (default)</label><input id='use_proxy' name='plugin_options[use_proxy]' size='40' type='text' value='{$options['use_proxy']}' />";
-} ?>
-
+} ?>*/
