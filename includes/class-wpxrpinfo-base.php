@@ -45,7 +45,6 @@ if(!class_exists('WP_XRP_Info')) {
                     'no');
             else $this->ledger = new WPXRPINFO_Ledger('https://s2.ripple.com:51234',
                 'yes');
-            return $this;
         }
 
     }
