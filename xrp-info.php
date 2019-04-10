@@ -112,7 +112,7 @@ function get_xrp_transactions($atts = [])
         if ($transaction->tx->Account != $atts['account'])
             $color = 'green';
         else $color = 'red';
-        $output .= "<tr><td style='color: ".$color."'>".$transaction->tx->Account.$dtag."</td><td>".$transaction->tx->Amount/1000000 ." XRP</td><td><a href='https://bithomp.com/explorer/".$transaction->tx->hash."' target='_blank'>".__('Show transaction')."</a></td><td>".date('Y-m-d H:i:s',$transaction->tx->date+946684800)."</td></tr>";
+        $output .= "<tr><td style='color: ".$color."'>".$transaction->tx->Account.$dtag."</td><td>".$transaction->tx->Amount/1000000 ." XRP</td><td><a href='https://bithomp.com/explorer/".$transaction->tx->hash."' target='_blank'>".__('Show transaction')."</a></td><td>". get_date_from_gmt(date('Y-m-d H:i:s',$transaction->tx->date+946684800),'Y-m-d H:i:s')."</td></tr>";
     }
     $output .= '</tbody></table></div>';
     return $output;
