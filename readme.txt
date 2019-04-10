@@ -35,9 +35,17 @@ The node **s2.ripple.com** is being used to talk to the XRP network.
 
 = What does the bypass firewall feature do? =
 
-By default, we speak [JSON-RPC](https://en.wikipedia.org/wiki/JSON#JSON-RPC) on port 51234 with the XRP server. Some webservers are behind a firewall that doesn't allow outgoing traffic on non-standard ports. By enabling this (type yes in options)  feature, we talk to [cors-anywhere.herokuapp.com](https://cors-anywhere.herokuapp.com/), using TLS on port 443, which then acts as a proxy and relays the traffic to the XRP server.
+
+By default, we speak [JSON-RPC](https://en.wikipedia.org/wiki/JSON#JSON-RPC) on port 51234 with the XRP server.
+Some webservers are behind a firewall that doesn't allow outgoing traffic on non-standard ports.
+By enabling this feature, we talk to [cors-anywhere.herokuapp.com](https://cors-anywhere.herokuapp.com/), using TLS on port 443, which then acts as a proxy and relays the traffic to the XRP server.
+To enable it just add proxy=yes in your shortcode.
 
 == Changelog ==
+= 1.0.1 =
+* fixed error message on activation
+* added proxy-option in shortcode
+
 = 1.0.0 =
 * Initial release!
 

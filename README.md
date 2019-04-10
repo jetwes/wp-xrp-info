@@ -36,6 +36,10 @@ To enable it just add proxy=yes in your shortcode.
 
 ## Changelog
 
+### 1.0.1
+* fixed error message on activation
+* added proxy-option in shortcode
+
 ### 1.0.0
 * Initial release!
 
