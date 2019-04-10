@@ -15,9 +15,9 @@ This plugin provides some shortcodes for simple displaying XRP accounts or trans
 
 ## Usage
 This plugins activates 3 shortcodes
-1. [xrp_account account=PLACE_THE_XRP_ACCOUNT_NUMBER]
-1. [xrp_transactions account=PLACE_THE_XRP_ACCOUNT_NUMBER limit=HOW_MANY_TRANSACTIONS]
-1. [xrp_qrcode account=PLACE_THE_XRP_ACCOUNT_NUMBER]
+1. [xrp_account account=PLACE_THE_XRP_ACCOUNT_NUMBER proxy=no]
+1. [xrp_transactions account=PLACE_THE_XRP_ACCOUNT_NUMBER limit=HOW_MANY_TRANSACTIONS proxy=no]
+1. [xrp_qrcode account=PLACE_THE_XRP_ACCOUNT_NUMBER proxy=no]
 
 Just use the shortcodes on any place in your wordpress content.
 
@@ -29,7 +29,10 @@ The node **s2.ripple.com** is being used to talk to the XRP network. This can ea
 
 ### What does the bypass firewall feature do?
 
-By default, we speak [JSON-RPC](https://en.wikipedia.org/wiki/JSON#JSON-RPC) on port 51234 with the XRP server. Some webservers are behind a firewall that doesn't allow outgoing traffic on non-standard ports. By enabling this (type yes in options) feature, we talk to [cors-anywhere.herokuapp.com](https://cors-anywhere.herokuapp.com/), using TLS on port 443, which then acts as a proxy and relays the traffic to the XRP server.
+By default, we speak [JSON-RPC](https://en.wikipedia.org/wiki/JSON#JSON-RPC) on port 51234 with the XRP server. 
+Some webservers are behind a firewall that doesn't allow outgoing traffic on non-standard ports. 
+By enabling this feature, we talk to [cors-anywhere.herokuapp.com](https://cors-anywhere.herokuapp.com/), using TLS on port 443, which then acts as a proxy and relays the traffic to the XRP server.
+To enable it just add proxy=yes in your shortcode.
 
 ## Changelog
 

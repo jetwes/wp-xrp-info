@@ -17,6 +17,16 @@ if(!class_exists('WP_XRP_Info')) {
         protected static $instance;
 
         /**
+         * @var WPXRPINFO_Ledger
+         */
+        public $ledger;
+
+        /**
+         * @var WPXRPINFO_Ledger
+         */
+        public $proxyLedger;
+
+        /**
          * Returns single instance of the class
          *
          * @return WP_XRP_Info
@@ -39,12 +49,8 @@ if(!class_exists('WP_XRP_Info')) {
         public function __construct()
         {
             include_once('class-wpxrpinfo-ledger.php');
-            $use_proxy = get_option('plugin_options')['use_proxy'];
-            if ($use_proxy != 'yes')
-                $this->ledger = new WPXRPINFO_Ledger('https://s2.ripple.com:51234',
-                    'no');
-            else $this->ledger = new WPXRPINFO_Ledger('https://s2.ripple.com:51234',
-                'yes');
+            $this->ledger = new WPXRPINFO_Ledger('https://s2.ripple.com:51234','no');
+            $this->proxyLedger = new WPXRPINFO_Ledger('https://s2.ripple.com:51234','yes');
             return $this;
         }
     }
