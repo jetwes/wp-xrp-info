@@ -36,6 +36,11 @@ To enable it just add proxy=yes in your shortcode.
 
 ## Changelog
 
+### 1.0.2
+* show destination tags
+* added css class for transaction table
+* show difference between sent and received transactions
+
 ### 1.0.1
 * fixed error message on activation
 * added proxy-option in shortcode
