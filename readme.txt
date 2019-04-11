@@ -1,4 +1,4 @@
-=== WP XRP Info XRP ===
+=== WP XRP Info ===
 Contributors: jetwes
 Donate link: r9JU6RToZGX78XFF9tdkqBogwBv7yEWcR
 Tags: xrp, wordpress
