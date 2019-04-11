@@ -65,3 +65,8 @@ To enable it just add proxy=yes in your shortcode.
 * A huge thank you to both [Ripple](https://ripple.com/) and [XRPL Labs](https://xrpl-labs.com/) for being awesome.
 * A huge thank you to [Jesper Wallin](https://twitter.com/empatogen) for his WooCommerceXRP - which helped
 * Thanks to **everyone** who tests new unreleased code to help us nail bugs.
+
+== Donate ==
+
+If you like this plugin and wish to donate, feel free to send some XRP to r9JU6RToZGX78XFF9tdkqBogwBv7yEWcR.
+
