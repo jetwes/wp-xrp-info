@@ -21,9 +21,9 @@ This plugin provides some shortcodes for simple displaying XRP accounts or trans
 
 == Usage ==
 This plugins activates 3 shortcodes
-1. [xrp_account account=PLACE_THE_XRP_ACCOUNT_NUMBER]
-1. [xrp_transactions account=PLACE_THE_XRP_ACCOUNT_NUMBER limit=HOW_MANY_TRANSACTIONS]
-1. [xrp_qrcode account=PLACE_THE_XRP_ACCOUNT_NUMBER]
+1. [xrp_account account=PLACE_THE_XRP_ACCOUNT_NUMBER proxy=no]
+1. [xrp_transactions account=PLACE_THE_XRP_ACCOUNT_NUMBER limit=HOW_MANY_TRANSACTIONS proxy=no]
+1. [xrp_qrcode account=PLACE_THE_XRP_ACCOUNT_NUMBER proxy=no]
 
 Just use the shortcodes on any place in your wordpress content.
 The transactions are shown as a table with the class "wp_xrp_info" so you can easily adjust the output with css.
