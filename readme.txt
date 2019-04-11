@@ -1,4 +1,4 @@
-=== WooCommerce XRP ===
+=== WP XRP Info XRP ===
 Contributors: jetwes
 Donate link: r9JU6RToZGX78XFF9tdkqBogwBv7yEWcR
 Tags: xrp, wordpress
@@ -44,6 +44,10 @@ By enabling this feature, we talk to [cors-anywhere.herokuapp.com](https://cors-
 To enable it just add proxy=yes in your shortcode.
 
 == Changelog ==
+
+= 1.0.3 =
+* show local timezone for transactions
+
 = 1.0.2 =
 * show destination tags
 * added css class for transaction table

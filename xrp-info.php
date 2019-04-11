@@ -3,7 +3,7 @@
  * Plugin Name: XRP Info
  * Plugin URI: http://github.com/jetwes/wp-xrp-info
  * Description: Generates a shortcodes to display balance of a <a href="https://ripple.com/xrp">XRP</a> account or the transactions of an account.
- * Version: 1.0.2
+ * Version: 1.0.3
  * Author: Jens Twesmann
  * Author URI: https://github.com/jetwes
  * Developer: Jens Twesmann
@@ -22,7 +22,7 @@ if (!defined('WPINC')) {
 }
 
 /* define constants */
-define('XRPINFO_VERSION', '1.0.1');
+define('XRPINFO_VERSION', '1.0.3');
 define('XRPINFO_TEXTDOMAIN', 'wp-xrp-info');
 define('XRPINFO_NAME', 'XRP Info');
 define('XRPINFO_PLUGIN_ROOT', plugin_dir_path(__FILE__));

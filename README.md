@@ -36,6 +36,9 @@ To enable it just add proxy=yes in your shortcode.
 
 ## Changelog
 
+### 1.0.3
+* show local timzone for transactions
+
 ### 1.0.2
 * show destination tags
 * added css class for transaction table
